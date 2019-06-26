@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
+    // Global Variables
+    let counter = 0;
+
     $('.crystal-image').click(function() {
-        alert('You clicked a crystal');
+        counter += 1;
+        alert('You clicked this crystal ' + counter + ' times!');
     });
 });
