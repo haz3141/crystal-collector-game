@@ -7,7 +7,13 @@ $(document).ready(function() {
     $('#number-to-guess').text(targetNum);
 
     $('.crystal-image').click(function() {
-        counter += 1;
-        alert('You clicked this crystal ' + counter + ' times!');
+        
+        counter += 10;
+        alert('Your new score is: ' + counter);
+
+        if (counter === targetNum) {
+            alert('You Win!');
+        };
     });
+
 });
