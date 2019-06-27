@@ -33,4 +33,5 @@ h1 {
 .crystal-image:hover {
     width: 190px;
     height: 190px;
+    transform: rotate(15deg);
 }
