@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-    <h2>Wins: <span id="wins"></span></h2>
-    <h2>Losses: <span id="losses"></span></h2>
-    <h2>Your Current Total: <span id="total-score"></span></h2>
-    <div id="crystals"></div>
-
+    <div id="game">
+            <h1>Crystal Collector Game</h1>
+        <div id="stats">
+                
+                <h2>Number to Guess: <span id="number-to-guess"></span></h1>
+                <h3>Wins: <span id="wins"></span></h2>
+                <h3>Losses: <span id="losses"></span></h2>
+                <h2>Your Current Total: <span id="total-score"></span></h2>
+        </div>
+        
+        <div id="crystals"></div>
+    </div>
+    
     <!-- jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Game Logic -->

@@ -3,8 +3,8 @@ $(document).ready(function() {
     // Global Variables
     let counter = 0;
     let targetNum = 0;
-    let crystalNum = [];
-    let crystals = ['red.jpg', 'blue.jpg', 'yellow.jpg', 'purple.jpg'];
+    let crystalNum = [1,2,3,4,5,6,7,8,9,10,11,12];
+    let crystals = ['red.png', 'blue.png', 'yellow.png', 'purple.png'];
     let wins = 0;
     let losses = 0;
 
@@ -13,15 +13,17 @@ $(document).ready(function() {
         // Generate new random target and write to page
         targetNum = getRndInteger(19, 120);
         counter = 0;
-
         $('#number-to-guess').text(targetNum);
         $('#total-score').text(counter);
         $('#crystals').empty();
 
-        // Generate four random numbers for crystals
+        // Sort array of numbers and pick from sorted array to avoid duplicate numbers
+        crystalNum.sort(function(a, b){return 0.5 - Math.random()});
+
+        // Pick first four random numbers for crystals
         for (let i = 0; i < crystals.length; i++) {
             
-            crystalNum[i] = getRndInteger(1, 12);
+            // crystalNum[i] = getRndInteger(1, 12);
             let imageCrystal = $('<img>');
             imageCrystal.addClass('crystal-image');
             imageCrystal.attr('src', 'assets/images/' + crystals[i]);
@@ -54,7 +56,7 @@ $(document).ready(function() {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
     };
 
-    // Generate crystals
+    // Logic for clicking crystals
     function clickCrystals() {
         $('.crystal-image').click(function() {
         

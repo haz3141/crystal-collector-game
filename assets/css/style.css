@@ -1,5 +1,32 @@
+body {
+    background-image: url(../images/vintage-concrete.png);
+    color: #9F6629;
+    font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: bolder;
+}
+
+#game {
+    margin: auto;
+    text-align: center;
+    
+}
+
+#stats {
+    -moz-box-shadow: 0 0 5px 5px #888;
+    -webkit-box-shadow: 0 0 5px 5px#888;
+    box-shadow: 0 0 5px 5px #888;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+}
+
 .crystal-image {
     width: 200px;
     height: 200px;
     cursor: pointer;
 }
+
